@@ -16,10 +16,14 @@ function Header(){
             localStorage.removeItem("usertoken")
             localStorage.removeItem("user")
         }
-
+        
         const selectedValue = event.target.value;
-        setSelectedOption(selectedValue);
-        navigate(selectedValue);
+        if(selectedValue !== selectedOption){
+            setSelectedOption(selectedValue);
+            // console.log(selectedOption)
+
+            navigate(selectedValue);
+        }
       };
 
       const handleRegister = ()=>{
