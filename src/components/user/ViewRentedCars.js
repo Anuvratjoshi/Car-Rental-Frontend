@@ -52,19 +52,3 @@ function ViewRentedCars() {
 
 }
 export default ViewRentedCars
-
-/*
-const showCartItems = (rentedFor) =>{
-        console.log(rentedFor)
-        fetch("http://localhost:8080/cartitems", {
-            method: "POST",
-            headers: {
-                "Authorization": "Bearer " + localStorage.getItem("usertoken"),
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                rentedFor:rentedFor
-            })
-        })
-    }
-*/

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
-// import "./CarForm.css";
 import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
@@ -48,7 +46,7 @@ function AddCar() {
             })
           }
           else {
-            console.log(data.addedBy)
+            // console.log(data.addedBy)
             getAddedCars(data.addedBy._id)
 
             toast.success("Car added successfully", {

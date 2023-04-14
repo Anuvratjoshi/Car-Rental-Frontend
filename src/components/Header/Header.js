@@ -52,7 +52,6 @@ function Header(){
         </span>
     </header>
     <div>
-        {/* <img style={{zIndex:"-1"}} src="https://wallpapers.com/images/featured/yvujuqnic9e56nsg.jpg" alt="car.jpg"/> */}
     </div>
     </>
 }
