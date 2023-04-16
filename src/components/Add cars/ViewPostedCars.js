@@ -32,7 +32,7 @@ function ViewPostedCars() {
 
     }, [])
 
-    const deleteItem = (id)=>{
+    const deleteItem = (id,car)=>{
         fetch("https://car-rental-backend-fpn8.onrender.com/deleteagencycar",{
             method:"DELETE",
             headers:{
@@ -48,6 +48,9 @@ function ViewPostedCars() {
             const newPostedCarArray = postedCars.filter(car=>{
                 return car._id !== deletedCar._id
             })
+            toast.success(`${car} removed successfully`,{
+                position:toast.POSITION.TOP_CENTER
+            })
             setPostedCars(newPostedCarArray)
         })
     }
@@ -61,7 +64,7 @@ function ViewPostedCars() {
         return <div key={i} className="car-data">
           <div>
             <b>Model:</b> {item.model}
-            <img onClick={()=>deleteItem(item._id)}
+            <img onClick={()=>deleteItem(item._id,item.model)}
             style={{ float: "right", height: "15px", width: "15px", cursor: "pointer" }} 
             src={del} alt="deleteicon.png" />
         </div>
