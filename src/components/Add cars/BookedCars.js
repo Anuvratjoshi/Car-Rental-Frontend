@@ -28,7 +28,8 @@ const [bookedCars,setBookedCars] = useState([])
           </div>
           <span><b>Seats:</b> {item.seatingCapacity}</span>
           <span className="car-rent"><b>Rent/day:</b> ₹{item.rentPerDay}</span>
-          <div><b>Car Number:</b> {item.carNumber} <span style={{float:"right"}}>Total Price :{item.totalPrice}</span></div>
+          <div><b>Car Number:</b> {item.carNumber} <span style={{float:"right"}}><b>Total Price :</b>₹{item.totalPrice}</span></div>
+          <div><b>Rented For:</b><span>{item.rentedFor}</span></div>
         </div>
 
       })}</div>
