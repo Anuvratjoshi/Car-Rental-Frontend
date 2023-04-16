@@ -93,9 +93,9 @@ function Header() {
     }
 
     return <><header className="header">
-        <span onClick={() => { checkWhoLoggedin() }}>Car Rental</span>
+        <span className="logo" onClick={() => { checkWhoLoggedin() }}>Car Rental</span>
         <span className="header_links">
-            <span>
+            <span className="signin-register">
                 Signin&nbsp;
                 <select value={selectedOption} style={{ width: "20px" }} onChange={handleSelectChange}>
                     <option value=""></option>
@@ -104,9 +104,9 @@ function Header() {
                 </select>
 
             </span>
-            <span><Link onClick={handleRegister} className="no_underline" to="/register">Register</Link></span>
+            <span className="signin-register"><Link onClick={handleRegister} className="no_underline" to="/register">Register</Link></span>
             <span onClick={handleLogOut}>
-                <Link to="/"><img className="header_links" style={{ height: "20px", width: "20px", marginTop: "18px" }}
+                <Link to="/"><img className="header_links logo"
                 src={logout}
                 alt="logoutbutton.png" />
                 </Link>
