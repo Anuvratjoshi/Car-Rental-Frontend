@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 function BookedCars(){
 const [bookedCars,setBookedCars] = useState([])
@@ -15,7 +16,11 @@ const [bookedCars,setBookedCars] = useState([])
             setBookedCars(result)
         })
     },[])
-    return  <div className="car-container">{bookedCars.map((item, i) => {
+    return<>
+        <Link to="/viewpostedcars">
+          <button  style={{float:"right",margin:"15px",cursor:"pointer"}}>Go Back</button>
+        </Link>
+      <div className="car-container">{bookedCars.map((item, i) => {
         return <div key={i} className="car-data">
           <div><b>Model:</b> {item.model}</div>
           <div className="car-image">
@@ -27,6 +32,7 @@ const [bookedCars,setBookedCars] = useState([])
         </div>
 
       })}</div>
+      </>
       
 }
 export default BookedCars

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+// import "./LoginPage.css";
 import {toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -45,7 +46,7 @@ const AgencySignin = () => {
                 })
                 localStorage.setItem("agencytoken",result.token)
                 localStorage.setItem("agency",JSON.stringify(result.user))
-                navigate("/addcar")
+                navigate("/viewpostedcars")
             }
         }).catch(err=>console.log(err))
     };
