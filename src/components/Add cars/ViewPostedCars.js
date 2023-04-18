@@ -24,7 +24,8 @@ function ViewPostedCars() {
                 })
             }
             else{
-                setPostedCars(result)
+                const rentCarNewToOld = result.reverse()
+                setPostedCars(rentCarNewToOld)
                 console.log(result)
             }
         })
