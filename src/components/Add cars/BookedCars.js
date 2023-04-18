@@ -5,7 +5,7 @@ function BookedCars(){
 const [bookedCars,setBookedCars] = useState([])
 
     useEffect(()=>{
-        fetch("https://car-rental-backend-fpn8.onrender.com/bookedcars",{
+        fetch("http://localhost:8080/bookedcars",{
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("agencytoken"),
                 "Content-Type": "application/json"
@@ -13,7 +13,8 @@ const [bookedCars,setBookedCars] = useState([])
         }).then(res=>res.json())
         .then(result=>{
             console.log(result)
-            setBookedCars(result)
+            const rentCarNewToOld = result.reverse()
+            setBookedCars(rentCarNewToOld)
         })
     },[])
     return<>
