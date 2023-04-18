@@ -27,7 +27,9 @@ function AvailableCars() {
                 }
                 else {
                     console.log(result)
-                    setCars(result)
+                    const reverseCars = result.reverse()
+
+                    setCars(reverseCars)
                 }
             })
 
