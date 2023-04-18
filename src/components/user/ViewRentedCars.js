@@ -24,7 +24,8 @@ function ViewRentedCars() {
                 }
                 else {
                     console.log(result)
-                    setRentedCars(result)
+                    const rentCarNewToOld = result.reverse()
+                    setRentedCars(rentCarNewToOld)
                 }
             })
 
